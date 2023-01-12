@@ -1,12 +1,13 @@
-'1. If a Meat Lovers pizza costs $12 and Vegetarian costs $10 and there were no charges for changes - 
-how much money has Pizza Runner made so far if there are no delivery fees? '
+' 1 What are the standard ingredients for each pizza?'
 
-Select sum(case
-when c.pizza_id =1 Then 12
-Else 10 End) as money_earned
-From runner_orders as r
-Join customer_orders as c On r.order_id=c.order_id
-Where r.distance != 0;
+Create table pizza_recipos_2
+(pizza_id int,
+toppinings int);
 
-'2. What if there was an additional $1 charge for any pizza extras? 
-Add cheese is $1 extra '
+Insert into pizza_recipos_2(pizza_id, toppininigs)
+value
+(1,1), (1,2), (1,3), (1,4), (1,5), (1,6), (1,8), (1,10),
+(2,4), (2,6), (2,7), (2,9), (2,11), (2,12);
+
+Select *
+From pizza_recipos_2;
